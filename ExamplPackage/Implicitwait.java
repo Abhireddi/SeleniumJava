@@ -1,0 +1,21 @@
+package ExamplPackage;
+
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class Implicitwait {
+	public static void main(String[] args) {
+		System.setProperty("webdriver.gecko.driver", "C:\\geckodriver-v0.11.1-win64\\geckodriver.exe");
+		WebDriver driver = new FirefoxDriver();
+		//implicit wait. the Document object module will wait for certain amount of time when trying to find an element
+		//this implict will be set for the life of the webdriver.
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);	
+		driver.get("https://www.irctc.co.in");
+		
+		
+		
+	}
+
+}
